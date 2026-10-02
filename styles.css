@@ -5,99 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Dera — UI/UX portfolio showcasing fashion discovery and luxury shopping experiences."
+      content="Dera UI/UX portfolio"
     />
-    <title>Dera | UI/UX Portfolio</title>
+    <title>Dera | UI/UX Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="layout">
-      <main class="showcase-grid">
-        <section class="phone dark-phone">
-          <div class="status-row">
-            <span class="time">9:41</span>
-            <span class="signal">◔ ◍ ◉</span>
+    <div class="device-shell">
+      <div class="device-frame">
+        <div class="status-bar">
+          <span class="time">5:46</span>
+          <div class="status-icons">
+            <span class="signal">◔</span>
+            <span class="wifi">◍</span>
+            <span class="battery">◍</span>
           </div>
+        </div>
 
-          <div class="screen dark-screen">
-            <button class="back-btn">‹</button>
-            <h2>Select Trends you'll love</h2>
-            <p>Browse what's hot, find your style, and shop effortlessly.</p>
+        <div class="browser-bar">
+          <span class="sparkle">✦</span>
+          <div class="url-box">ademolaadebowale17-ui.github.io</div>
+          <span class="share">↗</span>
+        </div>
 
-            <div class="trend-board">
-              <div class="trend-item green">☼</div>
-              <div class="trend-item purple">☼</div>
-              <div class="trend-item yellow">☼</div>
-              <div class="trend-item pink">☼</div>
-              <div class="trend-item orange">☼</div>
-            </div>
+        <main class="content">
+          <h1>
+            <span class="ui">UI/UX</span>
+            <span class="designer">Designer</span>
+          </h1>
 
-            <div class="choice-list">
-              <button class="chip active">Casual Wear <span>+</span></button>
-              <button class="chip">Streetwear <span>+</span></button>
-              <button class="chip">Formal Wear <span>+</span></button>
-              <button class="chip">Activewear <span>+</span></button>
-              <button class="chip">Loungewear <span>+</span></button>
-              <button class="chip">Office Style <span>+</span></button>
-              <button class="chip">Summer Fits <span>+</span></button>
-              <button class="chip">Winter Essentials <span>+</span></button>
-              <button class="chip">Party Wear <span>+</span></button>
-              <button class="chip">Birthday Party <span>+</span></button>
-              <button class="chip">Vacation <span>+</span></button>
-              <button class="chip selected">Trending</button>
-            </div>
+          <p class="lead">
+            I create intuitive, beautiful digital experiences that users
+            love.
+          </p>
 
-            <div class="cta-row">
-              <span class="counter">6/10 Selected</span>
-              <button class="next-btn">Next</button>
-            </div>
+          <a href="#work" class="work-link">View My Work</a>
+
+          <h2>Featured Projects</h2>
+
+          <div class="project-list" id="work">
+            <article class="project-item">
+              <h3>MARCK - Fashion App</h3>
+              <p>
+                Mobile onboarding experience for a style discovery app. Focus on
+                engaging users with vibrant design and smooth interactions.
+              </p>
+              <span class="tag">Mobile Design</span>
+            </article>
+
+            <article class="project-item">
+              <h3>E-Commerce Cart</h3>
+              <p>
+                Clean and minimal shopping cart interface with dual theme support
+                (dark &amp; light mode). Optimized for conversion.
+              </p>
+              <span class="tag">E-Commerce</span>
+            </article>
+
+            <article class="project-item">
+              <h3>Style Discovery Platform</h3>
+              <p>
+                Curated fashion discovery platform with trending categories and
+                personalized recommendations for users.
+              </p>
+              <span class="tag">Web Design</span>
+            </article>
+
+            <article class="project-item">
+              <h3>Trend Preference Flow</h3>
+              <p>
+                Onboarding experience with trend selection and playful visual
+                cues to improve engagement.
+              </p>
+              <span class="tag">UX Flow</span>
+            </article>
           </div>
-        </section>
+        </main>
 
-        <section class="phone light-phone">
-          <div class="status-row light-status">
-            <span class="time">9:41</span>
-            <span class="signal">◔ ◍ ◉</span>
-          </div>
-
-          <div class="screen light-screen">
-            <button class="back-btn light-back">‹</button>
-            <h2>Select Trends you'll love</h2>
-            <p>Browse what's hot, find your style, and shop effortlessly.</p>
-
-            <div class="trend-board light-board">
-              <div class="trend-item green">☼</div>
-              <div class="trend-item purple">☼</div>
-              <div class="trend-item yellow">☼</div>
-              <div class="trend-item pink">☼</div>
-              <div class="trend-item orange">☼</div>
-            </div>
-
-            <div class="choice-list light-choices">
-              <button class="chip light-chip active">Casual Wear <span>+</span></button>
-              <button class="chip light-chip">Streetwear <span>+</span></button>
-              <button class="chip light-chip">Formal Wear <span>+</span></button>
-              <button class="chip light-chip">Activewear <span>+</span></button>
-              <button class="chip light-chip">Loungewear <span>+</span></button>
-              <button class="chip light-chip">Office Style <span>+</span></button>
-              <button class="chip light-chip">Summer Fits <span>+</span></button>
-              <button class="chip light-chip">Winter Essentials <span>+</span></button>
-              <button class="chip light-chip">Party Wear <span>+</span></button>
-              <button class="chip light-chip">Birthday Party <span>+</span></button>
-              <button class="chip light-chip">Vacation <span>+</span></button>
-              <button class="chip light-chip selected">Trending</button>
-            </div>
-
-            <div class="cta-row light-row">
-              <span class="counter">6/10 Selected</span>
-              <button class="next-btn light-next">Next</button>
-            </div>
-          </div>
-        </section>
-      </main>
+        <div class="bottom-nav">
+          <button aria-label="Previous" class="nav-arrow">‹</button>
+          <button aria-label="Next" class="nav-arrow">›</button>
+          <button class="center-btn" aria-label="Add">＋</button>
+          <button class="emoji-btn" aria-label="Emoji">◒</button>
+          <button class="dots" aria-label="More">•••</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
