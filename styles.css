@@ -1,440 +1,135 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-}
-
-.container {
-  width: min(1200px, calc(100% - 40px));
-  margin: 0 auto;
-}
-
-/* NAVBAR */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #000;
-  border-bottom: 1px solid #222;
-  backdrop-filter: blur(10px);
-}
-
-.nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-  gap: 40px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.nav-links {
-  display: flex;
-  gap: 40px;
-  flex: 1;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-links a:hover {
-  color: #FF6B6B;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.cta-button {
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-}
-
-/* HERO SECTION */
-.hero {
-  padding: 120px 0;
-  text-align: center;
-  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
-}
-
-.hero-content h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 800;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-  line-height: 1.1;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  color: #aaa;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
-}
-
-.hero-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.hero-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
-}
-
-/* PORTFOLIO SECTION */
-.portfolio {
-  padding: 100px 0;
-  background-color: #000;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 60px;
-  letter-spacing: -0.5px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  background: #0a0a0a;
-  border: 1px solid #222;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.project-card:hover {
-  border-color: #FF6B6B;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(255, 107, 107, 0.2);
-}
-
-.project-image {
-  width: 100%;
-  height: 220px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-image::after {
-  opacity: 0;
-}
-
-.project-info {
-  padding: 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-info h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #fff;
-}
-
-.project-info p {
-  color: #999;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-  flex: 1;
-  line-height: 1.6;
-}
-
-.project-tag {
-  display: inline-block;
-  background: rgba(255, 107, 107, 0.1);
-  color: #FF6B6B;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  width: fit-content;
-}
-
-/* ABOUT SECTION */
-.about {
-  padding: 100px 0;
-  background-color: #0a0a0a;
-  border-top: 1px solid #222;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-text h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  color: #aaa;
-  margin-bottom: 20px;
-  line-height: 1.8;
-  font-size: 0.95rem;
-}
-
-.skills h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skill-badge {
-  background: rgba(255, 107, 107, 0.1);
-  color: #FF6B6B;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid rgba(255, 107, 107, 0.2);
-}
-
-/* CONTACT SECTION */
-.contact {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #000 0%, #0a0a0a 100%);
-  border-top: 1px solid #222;
-}
-
-.contact-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-content h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.contact-content p {
-  color: #aaa;
-  font-size: 1.05rem;
-  margin-bottom: 40px;
-}
-
-.contact-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 40px;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.social-link {
-  color: #aaa;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.social-link:hover {
-  color: #FF6B6B;
-}
-
-.social-link::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #FF6B6B, #FF8E72);
-  transition: width 0.3s ease;
-}
-
-.social-link:hover::after {
-  width: 100%;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #000;
-  border-top: 1px solid #222;
-  padding: 30px 0;
-  text-align: center;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .nav-content {
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .hero {
-    padding: 80px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 18px;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .project-info {
-    padding: 16px;
-  }
-
-  .contact-content h2 {
-    font-size: 1.8rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dera — UI/UX portfolio showcasing thoughtful product design and digital experiences."
+    />
+    <title>Dera | UI/UX Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">Dera</div>
+        <nav class="nav">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="nav-btn">Book a call</a>
+      </header>
+
+      <main>
+        <section class="showcase" id="work">
+          <div class="phone-frame dark-frame">
+            <div class="statusbar">
+              <span>9:41</span>
+              <span class="icons">◔ ◍ ◉</span>
+            </div>
+            <div class="screen black-screen">
+              <div class="brand-mark">MARCK</div>
+            </div>
+          </div>
+
+          <div class="phone-frame pink-frame">
+            <div class="statusbar">
+              <span>9:41</span>
+              <span class="icons">◔ ◍ ◉</span>
+            </div>
+            <div class="screen pink-screen">
+              <div class="brand-mark light">MARCK</div>
+              <div class="fashion-card">
+                <div class="portrait portrait-one"></div>
+                <div class="promo-copy">
+                  <span>Your next outfit is a scroll away</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-frame purple-frame">
+            <div class="statusbar">
+              <span>9:41</span>
+              <span class="icons">◔ ◍ ◉</span>
+            </div>
+            <div class="screen purple-screen">
+              <div class="brand-mark light">MARCK</div>
+              <div class="portrait portrait-two"></div>
+              <div class="promo-copy large">
+                <span>Find styles that make you smile.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-gallery">
+          <article class="gallery-card large-card">
+            <div class="card-visual visual-one"></div>
+            <div class="card-copy">
+              <p class="label">E-commerce</p>
+              <h3>My Cart</h3>
+              <p>Luxury product checkout flow with crisp product cards, quantity controls, and a refined responsive layout.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="card-visual visual-two"></div>
+            <div class="card-copy">
+              <p class="label">Fashion discovery</p>
+              <h3>Discover your style</h3>
+              <p>Personalized styling experience with trend recommendations and category filters.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="card-visual visual-three"></div>
+            <div class="card-copy">
+              <p class="label">Lifestyle app</p>
+              <h3>Trend selection</h3>
+              <p>Interactive preference-based onboarding for fashion discovery and user engagement.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="about" id="about">
+          <div class="about-copy">
+            <p class="eyebrow">About</p>
+            <h2>Clean design. Thoughtful experiences.</h2>
+            <p>
+              I design product experiences that balance functionality, emotion, and clarity.
+              My work focuses on user-centered interfaces that feel premium, intuitive, and memorable.
+            </p>
+          </div>
+
+          <div class="skill-stack">
+            <span>UI Design</span>
+            <span>UX Research</span>
+            <span>Product Design</span>
+            <span>Wireframing</span>
+            <span>Prototyping</span>
+            <span>Design Systems</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer" id="contact">
+        <div class="foot-wrap">
+          <div>
+            <div class="brand">Dera</div>
+            <p>UI/UX designer crafting digital experiences that connect.</p>
+          </div>
+          <a href="mailto:hello@dera.design" class="footer-btn">hello@dera.design</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
